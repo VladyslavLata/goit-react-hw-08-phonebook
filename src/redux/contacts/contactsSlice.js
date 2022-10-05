@@ -38,7 +38,7 @@ export const contactsSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       const contactIndex = state.items.findIndex(
-        item => item.id === action.payload.id
+        item => item.id === action.payload
       );
       state.items.splice(contactIndex, 1);
     },

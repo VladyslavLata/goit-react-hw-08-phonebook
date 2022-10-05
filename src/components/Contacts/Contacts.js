@@ -9,7 +9,7 @@ export const Contacts = ({ onRemoveContact }) => {
   const visibleContacts = useSelector(selectVisibleContacts);
   return (
     <Box as="ul" py={4}>
-      {visibleContacts.map(({ name, phone, id }) => (
+      {visibleContacts.map(({ name, number, id }) => (
         <Box
           as="li"
           p={3}
@@ -21,7 +21,7 @@ export const Contacts = ({ onRemoveContact }) => {
         >
           <div>
             <h3>{name}</h3>
-            <Number>{phone}</Number>
+            <Number>{number}</Number>
           </div>
           <ButtonDelete onRemoveContact={onRemoveContact} id={id}>
             Delete

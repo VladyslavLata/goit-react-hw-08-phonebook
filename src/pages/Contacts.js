@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Section } from '.components/Section/Section';
-import { PhonebookForm } from '.components/PhonebookForm/PhonebookForm';
-import { Contacts } from '.components/Contacts/Contacts';
-import { Filter } from '.components/Filter/Filter';
-import { Spinner } from '.components/Spinner/Spinner';
+import { Section } from 'components/Section/Section';
+import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
+import { Contacts } from 'components/Contacts/Contacts';
+import { Filter } from 'components/Filter/Filter';
+import { Spinner } from 'components/Spinner/Spinner';
 import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
-import { Message } from '.components/Message/Message';
+import { Message } from 'components/Message/Message';
 
 export const ContactsPage = () => {
   const dispatch = useDispatch();

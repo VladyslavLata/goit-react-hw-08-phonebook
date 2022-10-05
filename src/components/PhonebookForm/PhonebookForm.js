@@ -22,7 +22,7 @@ const schema = yup.object().shape({
       'Name may contain only letters, apostrophe, dash and spaces'
     )
     .required(),
-  phone: yup
+  number: yup
     .string()
     .strict()
     .trim()
@@ -35,7 +35,7 @@ const schema = yup.object().shape({
 
 const initialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 export const PhonebookForm = ({ onAddContact, onReviewName }) => {
@@ -61,10 +61,10 @@ export const PhonebookForm = ({ onAddContact, onReviewName }) => {
           <Field autoComplete="off" type="text" name="name" />
           <ErrorText component="p" name="name" />
         </label>
-        <label htmlFor="phone">
+        <label htmlFor="number">
           <LabelName>Phone</LabelName>
-          <Field type="tel" name="phone" />
-          <ErrorText component="p" name="phone" />
+          <Field type="tel" name="number" />
+          <ErrorText component="p" name="number" />
         </label>
         <AddButton type="submit" disabled={loading}>
           Add contact
