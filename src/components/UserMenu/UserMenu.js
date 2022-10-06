@@ -7,7 +7,7 @@ export const UserMenu = () => {
   const { user } = useAuth();
   return (
     <div>
-      <p>Welcom, {user.name}</p>
+      <p>Welcom, {user?.name}</p>
       <button type="button" onClick={() => dispatch(logout())}>
         Logout
       </button>
