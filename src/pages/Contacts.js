@@ -9,7 +9,7 @@ import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
 import { Message } from 'components/Message/Message';
 
-export const ContactsPage = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectors.selectContacts);
   const name = useSelector(selectors.selectFilterName);
@@ -60,3 +60,5 @@ export const ContactsPage = () => {
     </>
   );
 };
+
+export default ContactsPage;

@@ -1,6 +1,6 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
-export const RegisterPage = () => {
+const RegisterPage = () => {
   return (
     <div>
       <p>Register form</p>
@@ -8,3 +8,5 @@ export const RegisterPage = () => {
     </div>
   );
 };
+
+export default RegisterPage;

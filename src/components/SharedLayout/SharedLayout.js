@@ -1,5 +1,6 @@
 import { Box } from 'components/Box/Box';
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { AppBar } from 'components/AppBar/AppBar';
 
 export const SharedLayout = ({ children }) => {
@@ -7,7 +8,9 @@ export const SharedLayout = ({ children }) => {
     <>
       <Box my={0} mx="auto" p={(0, 4)}>
         <AppBar />
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </Box>
     </>
   );
