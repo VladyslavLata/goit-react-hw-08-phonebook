@@ -7,8 +7,8 @@ export const theme = {
     gray: '#929292',
     text: '#2a2a2a',
     bgWhite: '#fff',
-    bgBlack: '#000',
-    bgGray: '#dcdcdc',
+    bgPrimary: '#FFEBCD',
+    bgSecondary: '#DEB887',
     primary: '#07c',
     secondary: '#05a',
     accent: '#00ffff',
@@ -38,6 +38,7 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    fat: '3px solid',
   },
   radii: {
     none: '0',
