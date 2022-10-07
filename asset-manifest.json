@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.39e895c7.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.720146a5.js",
-    "static/js/266.858fbaa7.chunk.js": "/goit-react-hw-08-phonebook/static/js/266.858fbaa7.chunk.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.2dda1156.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.3f5c2078.js",
     "static/js/349.b29cc93a.chunk.js": "/goit-react-hw-08-phonebook/static/js/349.b29cc93a.chunk.js",
     "static/js/960.618b28f4.chunk.js": "/goit-react-hw-08-phonebook/static/js/960.618b28f4.chunk.js",
     "static/js/139.81d3cab2.chunk.js": "/goit-react-hw-08-phonebook/static/js/139.81d3cab2.chunk.js",
     "static/js/986.8c89c9db.chunk.js": "/goit-react-hw-08-phonebook/static/js/986.8c89c9db.chunk.js",
     "static/js/850.ccff9e63.chunk.js": "/goit-react-hw-08-phonebook/static/js/850.ccff9e63.chunk.js",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.39e895c7.css.map": "/goit-react-hw-08-phonebook/static/css/main.39e895c7.css.map",
-    "main.720146a5.js.map": "/goit-react-hw-08-phonebook/static/js/main.720146a5.js.map",
-    "266.858fbaa7.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/266.858fbaa7.chunk.js.map",
+    "main.2dda1156.css.map": "/goit-react-hw-08-phonebook/static/css/main.2dda1156.css.map",
+    "main.3f5c2078.js.map": "/goit-react-hw-08-phonebook/static/js/main.3f5c2078.js.map",
     "349.b29cc93a.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/349.b29cc93a.chunk.js.map",
     "960.618b28f4.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/960.618b28f4.chunk.js.map",
     "139.81d3cab2.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/139.81d3cab2.chunk.js.map",
@@ -19,7 +17,7 @@
     "850.ccff9e63.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/850.ccff9e63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39e895c7.css",
-    "static/js/main.720146a5.js"
+    "static/css/main.2dda1156.css",
+    "static/js/main.3f5c2078.js"
   ]
 }
