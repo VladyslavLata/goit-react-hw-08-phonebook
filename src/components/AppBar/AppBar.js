@@ -12,7 +12,7 @@ export const AppBar = () => {
       py={4}
       display="flex"
       justifyContent="space-between"
-      borderBottom="fat"
+      borderBottom="m"
       borderColor="bgSecondary"
     >
       <Navigation />

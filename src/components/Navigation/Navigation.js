@@ -9,7 +9,9 @@ export const Navigation = () => {
     <nav>
       <Box as="ul" display="flex" gridGap={5}>
         <SC.Item>
-          <SC.Link to="/">Home</SC.Link>
+          <SC.Link to="/" end>
+            Home
+          </SC.Link>
         </SC.Item>
         {isLogined && (
           <SC.Item>
