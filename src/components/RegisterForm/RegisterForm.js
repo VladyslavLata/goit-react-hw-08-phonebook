@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import {
   LabelName,
   AddButton,
+  Input,
 } from 'components/PhonebookForm/Phonebook.styled';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
@@ -41,17 +42,17 @@ export const RegisterForm = () => {
       <Form>
         <label htmlFor="name">
           <LabelName>Name</LabelName>
-          <Field autoComplete="off" type="text" name="name" />
+          <Input autoComplete="off" type="text" name="name" />
           <ErrorText component="p" name="name" />
         </label>
         <label htmlFor="email">
           <LabelName>Email</LabelName>
-          <Field type="email" name="email" />
+          <Input type="email" name="email" />
           <ErrorText component="p" name="email" />
         </label>
         <label htmlFor="password">
           <LabelName>Password</LabelName>
-          <Field type="password" name="password" />
+          <Input type="password" name="password" />
           <ErrorText component="p" name="password" />
         </label>
         <AddButton
