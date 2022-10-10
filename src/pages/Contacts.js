@@ -4,7 +4,7 @@ import { Section } from 'components/Section/Section';
 import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
-import { Spinner } from 'components/Spinner/Spinner';
+// import { Spinner } from 'components/Spinner/Spinner';
 import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
 import { Message } from 'components/Message/Message';
@@ -13,7 +13,7 @@ const ContactsPage = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectors.selectContacts);
   const name = useSelector(selectors.selectFilterName);
-  const loading = useSelector(selectors.selectLoading);
+  // const loading = useSelector(selectors.selectLoading);
   const messageError = useSelector(selectors.selectErrorMessage);
   const visibleContacts = useSelector(selectors.selectVisibleContacts);
 
@@ -44,7 +44,7 @@ const ContactsPage = () => {
           onAddContact={addContact}
           onReviewName={reviewNameInContacts}
         />
-        <Spinner loading={loading} size={'56'} />
+        {/* <Spinner loading={loading} size={'56'} /> */}
       </Section>
       <Section title="Contacts">
         <Filter

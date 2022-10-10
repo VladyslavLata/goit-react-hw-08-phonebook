@@ -1,18 +1,20 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import {
   LabelName,
-  AddButton,
+  // AddButton,
   Input,
+  ErrorText,
 } from 'components/PhonebookForm/Phonebook.styled';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { Button } from 'components/Button/Button';
 // import { useAuth } from 'hooks/useAuth';
 
-const ErrorText = styled(ErrorMessage)`
-  color: red;
-`;
+// const ErrorText = styled(ErrorMessage)`
+//   color: red;
+// `;
 
 const schema = yup.object().shape({
   name: yup.string().strict().trim().min(1).max(30).required(),
@@ -55,12 +57,13 @@ export const RegisterForm = () => {
           <Input type="password" name="password" />
           <ErrorText component="p" name="password" />
         </label>
-        <AddButton
+        <Button>Register</Button>
+        {/* <AddButton
           type="submit"
           // disabled={loading}
         >
           Register
-        </AddButton>
+        </AddButton> */}
       </Form>
     </Formik>
   );

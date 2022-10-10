@@ -34,9 +34,9 @@ export const contactsSlice = createSlice({
       state.items.unshift(action.payload);
     },
     [addNewContact.rejected]: handleRejected,
-    [deleteContact.pending]: handlePending,
+    // [deleteContact.pending]: handlePending,
     [deleteContact.fulfilled]: (state, action) => {
-      state.isLoading = false;
+      // state.isLoading = false;
       state.error = null;
       const contactIndex = state.items.findIndex(
         item => item.id === action.payload

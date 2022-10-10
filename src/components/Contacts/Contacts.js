@@ -1,32 +1,26 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Box/Box';
-import { Number } from './Contacts.styled';
+import * as SC from './Contacts.styled';
 import { ButtonDelete } from 'components/ButtonDelete/ButtonDelete';
 import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from 'redux/contacts/selectors';
+// import { AiOutlineDelete } from 'react-icons/ai/index.esm';
+import { VscClose } from 'react-icons/vsc/index.esm';
 
 export const Contacts = ({ onRemoveContact }) => {
   const visibleContacts = useSelector(selectVisibleContacts);
   return (
     <Box as="ul" py={4}>
       {visibleContacts.map(({ name, number, id }) => (
-        <Box
-          as="li"
-          p={3}
-          display="flex"
-          width="300px"
-          justifyContent="space-between"
-          alignItems="center"
-          key={id}
-        >
+        <SC.ContactCard key={id}>
           <div>
             <h3>{name}</h3>
-            <Number>{number}</Number>
+            <SC.Number>{number}</SC.Number>
           </div>
           <ButtonDelete onRemoveContact={onRemoveContact} id={id}>
-            Delete
+            <VscClose />
           </ButtonDelete>
-        </Box>
+        </SC.ContactCard>
       ))}
     </Box>
   );

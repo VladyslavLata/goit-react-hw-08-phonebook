@@ -5,7 +5,7 @@ export const Spinner = ({ loading, size }) => {
   return (
     <SpinnerWrap>
       <RotatingLines
-        strokeColor="grey"
+        strokeColor="#ffffff"
         strokeWidth="5"
         animationDuration="0.75"
         width={size}

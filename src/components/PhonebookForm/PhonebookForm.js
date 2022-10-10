@@ -1,14 +1,11 @@
-import { Formik, Form, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import PropTypes from 'prop-types';
 import * as yup from 'yup';
-import { LabelName, AddButton, Input } from './Phonebook.styled';
-import styled from 'styled-components';
+import { LabelName, Input, ErrorText, Label } from './Phonebook.styled';
 import { useSelector } from 'react-redux';
 import { selectLoading } from 'redux/contacts/selectors';
-
-const ErrorText = styled(ErrorMessage)`
-  color: red;
-`;
+import { Button } from 'components/Button/Button';
+import { Spinner } from 'components/Spinner/Spinner';
 
 const schema = yup.object().shape({
   name: yup
@@ -56,19 +53,23 @@ export const PhonebookForm = ({ onAddContact, onReviewName }) => {
       onSubmit={handleSubmit}
     >
       <Form>
-        <label htmlFor="name">
+        <Label htmlFor="name">
           <LabelName>Name</LabelName>
           <Input autoComplete="off" type="text" name="name" />
           <ErrorText component="p" name="name" />
-        </label>
-        <label htmlFor="number">
+        </Label>
+        <Label htmlFor="number">
           <LabelName>Phone</LabelName>
           <Input type="tel" name="number" />
           <ErrorText component="p" name="number" />
-        </label>
-        <AddButton type="submit" disabled={loading}>
+        </Label>
+        <Button disabled={loading}>
           Add contact
-        </AddButton>
+          <Spinner loading={loading} size="24" />
+        </Button>
+        {/* <AddButton type="submit" disabled={loading}>
+          Add contact
+        </AddButton> */}
       </Form>
     </Formik>
   );
