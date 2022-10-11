@@ -1,15 +1,19 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Section } from 'components/Section/Section';
 import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
 // import { Spinner } from 'components/Spinner/Spinner';
+import { Button } from 'components/Button/Button';
+import { Modal } from 'components/Modal/Modal';
 import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
 import { Message } from 'components/Message/Message';
 
 const ContactsPage = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const dispatch = useDispatch();
   const contacts = useSelector(selectors.selectContacts);
   const name = useSelector(selectors.selectFilterName);
@@ -20,6 +24,10 @@ const ContactsPage = () => {
   useEffect(() => {
     dispatch(operations.fetchContacts());
   }, [dispatch]);
+
+  const togleModal = () => {
+    setShowModal(!showModal);
+  };
 
   const reviewNameInContacts = name => {
     return contacts.find(contact => contact.name === name);
@@ -47,6 +55,9 @@ const ContactsPage = () => {
         {/* <Spinner loading={loading} size={'56'} /> */}
       </Section>
       <Section title="Contacts">
+        <Button type="button" onClick={togleModal}>
+          Add contact
+        </Button>
         <Filter
           filterHeader="Find contacts by name"
           value={name}
@@ -56,6 +67,7 @@ const ContactsPage = () => {
         {visibleContacts.length > 0 && (
           <Contacts onRemoveContact={removeContact} />
         )}
+        {showModal && <Modal onClose={togleModal} />}
       </Section>
     </>
   );

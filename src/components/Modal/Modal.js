@@ -12,8 +12,8 @@ export const Modal = ({ onClose, children }) => {
       }
     };
 
-    window.addEventListener('onClick', closeModalPressEsc);
-    return () => window.removeEventListener('onClick', closeModalPressEsc);
+    window.addEventListener('keydown', closeModalPressEsc);
+    return () => window.removeEventListener('keydown', closeModalPressEsc);
   }, [onClose]);
 
   const closeModalClickBackdrop = e => {

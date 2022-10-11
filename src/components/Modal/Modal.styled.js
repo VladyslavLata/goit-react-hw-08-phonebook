@@ -14,6 +14,7 @@ export const ModalWrap = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  max-width: 500px;
+  width: 600px;
+  height: 500px;
+  background-color: ${p => p.theme.colors.bgPrimary};
 `;
