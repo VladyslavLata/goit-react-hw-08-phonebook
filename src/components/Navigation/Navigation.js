@@ -6,8 +6,8 @@ import * as SC from './Navigation.styled';
 export const Navigation = () => {
   const { isLogined } = useAuth();
   return (
-    <nav>
-      <Box as="ul" display="flex" gridGap={5}>
+    <Box as="nav">
+      <Box as="ul" display="inline-flex" gridGap={5}>
         <SC.Item>
           <SC.Link to="/" end>
             Home
@@ -19,6 +19,6 @@ export const Navigation = () => {
           </SC.Item>
         )}
       </Box>
-    </nav>
+    </Box>
   );
 };

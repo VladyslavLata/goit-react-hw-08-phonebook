@@ -17,7 +17,7 @@ export const UserMenu = () => {
         Welcom,
         <SC.UserIcon /> {user?.name}
       </p>
-      <Button type="button" onClick={userLogout}>
+      <Button margin="0 0 0 16px" type="button" onClick={userLogout}>
         Logout
       </Button>
       {/* <button type="button" onClick={() => dispatch(logout())}>

@@ -1,6 +1,11 @@
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
-import { LabelName, Input, ErrorText } from 'components/PhonebookForm/Phonebook.styled';
+import {
+  LabelName,
+  Input,
+  ErrorText,
+  Label,
+} from 'components/PhonebookForm/Phonebook.styled';
 // import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operations';
@@ -35,17 +40,17 @@ export const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       <Form>
-        <label htmlFor="email">
+        <Label htmlFor="email">
           <LabelName>Email</LabelName>
           <Input type="email" name="email" />
           <ErrorText component="p" name="email" />
-        </label>
-        <label htmlFor="password">
+        </Label>
+        <Label htmlFor="password">
           <LabelName>Password</LabelName>
           <Input type="password" name="password" />
           <ErrorText component="p" name="password" />
-        </label>
-        <Button>Log In</Button>
+        </Label>
+        <Button margin="32px 0 0">Log In</Button>
         {/* <AddButton
           type="submit"
           // disabled={loading}

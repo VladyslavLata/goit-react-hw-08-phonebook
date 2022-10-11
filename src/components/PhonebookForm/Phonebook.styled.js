@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
 
 export const Label = styled.label`
-  display: inline-block;
+  position: relative;
+  display: block;
 
-  /* & :last-child {
-    color: red;
+  &:not(:last-child) {
+    /* color: red; */
     margin-bottom: ${p => p.theme.space[4]}px;
-  } */
+  }
 `;
 
 export const Input = styled(Field)`
@@ -42,6 +43,9 @@ export const LabelName = styled.p`
 // `;
 
 export const ErrorText = styled(ErrorMessage)`
+  position: absolute;
+  bottom: -${p => p.theme.space[4]}px;
+  left: 0;
   color: ${p => p.theme.colors.red};
   font-size: ${p => p.theme.fontSizes.xs};
 `;

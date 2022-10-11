@@ -5,6 +5,7 @@ import {
   // AddButton,
   Input,
   ErrorText,
+  Label,
 } from 'components/PhonebookForm/Phonebook.styled';
 // import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
@@ -42,22 +43,22 @@ export const RegisterForm = () => {
       onSubmit={handleSubmit}
     >
       <Form>
-        <label htmlFor="name">
+        <Label htmlFor="name">
           <LabelName>Name</LabelName>
           <Input autoComplete="off" type="text" name="name" />
           <ErrorText component="p" name="name" />
-        </label>
-        <label htmlFor="email">
+        </Label>
+        <Label htmlFor="email">
           <LabelName>Email</LabelName>
           <Input type="email" name="email" />
           <ErrorText component="p" name="email" />
-        </label>
-        <label htmlFor="password">
+        </Label>
+        <Label htmlFor="password">
           <LabelName>Password</LabelName>
           <Input type="password" name="password" />
           <ErrorText component="p" name="password" />
-        </label>
-        <Button>Register</Button>
+        </Label>
+        <Button margin="32px 0 0 ">Register</Button>
         {/* <AddButton
           type="submit"
           // disabled={loading}
