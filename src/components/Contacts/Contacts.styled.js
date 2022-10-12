@@ -8,7 +8,7 @@ export const Number = styled.p`
 export const ContactsList = styled.ul`
   padding: ${p => p.theme.space[4]}px ${p => p.theme.space[3]}px;
   margin-top: ${p => p.theme.space[4]}px;
-  height: 400px;
+  max-height: 490px;
   overflow: auto;
   border: ${p => p.theme.borders.m};
   border-color: ${p => p.theme.colors.bgSecondary};
@@ -22,6 +22,8 @@ export const ContactCard = styled.li`
   align-items: center;
   width: 100%;
   padding: ${p => p.theme.space[3]}px;
+  border: ${p => p.theme.borders.m};
+  border-color: inherit;
   border-radius: ${p => p.theme.radii.md};
   background-color: ${p =>
     p.index % 2 === 0 ? p.theme.colors.bgPrimary : p.theme.colors.bgSecondary};
@@ -29,5 +31,11 @@ export const ContactCard = styled.li`
 
   &:not(:last-child) {
     margin-bottom: ${p => p.theme.space[3]}px;
+  }
+
+  &:hover,
+  :focus {
+    border: ${p => p.theme.borders.m};
+    border-color: ${p => p.theme.colors.accent};
   }
 `;

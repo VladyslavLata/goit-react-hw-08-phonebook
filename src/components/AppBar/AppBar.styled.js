@@ -6,15 +6,16 @@ export const Header = styled.header`
   left: 32px;
   right: 32px;
   display: flex;
-
+  z-index: 1;
   justify-content: space-between;
   /* width: 100%; */
   /* padding: 0 30px; */
+
   padding-top: ${p => p.theme.space[4]}px;
   padding-bottom: ${p => p.theme.space[4]}px;
   border-bottom: ${p => p.theme.borders.m};
   border-color: ${p => p.theme.colors.bgSecondary};
-  background-color: ${p => p.theme.borders.bgPrimary};
+  background-color: ${p => p.theme.colors.bgPrimary};
   /* py={4}
       display="flex"
       position="fixed"

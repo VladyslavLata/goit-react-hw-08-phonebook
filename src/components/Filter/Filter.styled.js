@@ -6,7 +6,8 @@ export const FilterHeader = styled.p`
 
 export const Input = styled.input`
   padding: ${p => p.theme.space[0]} ${p => p.theme.space[3]}px;
-  width: 320px;
+  box-sizing: border-box;
+  width: 100%;
   height: 30px;
   font-size: ${p => p.theme.fontSizes.s};
   border: ${p => p.theme.borders.m};

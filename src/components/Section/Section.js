@@ -11,6 +11,7 @@ export const Section = ({ title, children }) => (
     mx="auto"
     width="400px"
     position="relative"
+    // zIndex="-8"
   >
     {title && <SectionTitle>{title}</SectionTitle>}
     {children}
