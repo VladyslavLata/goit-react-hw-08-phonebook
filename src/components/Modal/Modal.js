@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
+import { RiCloseFill } from 'react-icons/ri/index.esm';
 import * as SC from './Modal.styled';
 
 const modalEl = document.getElementById('modal');
@@ -24,7 +25,12 @@ export const Modal = ({ onClose, children }) => {
 
   return createPortal(
     <SC.Backdrop onClick={closeModalClickBackdrop}>
-      <SC.ModalWrap>{children}</SC.ModalWrap>
+      <SC.ModalWrap>
+        {children}
+        <SC.ButtonCloseModal onClick={() => onClose()}>
+          <RiCloseFill />
+        </SC.ButtonCloseModal>
+      </SC.ModalWrap>
     </SC.Backdrop>,
     modalEl
   );

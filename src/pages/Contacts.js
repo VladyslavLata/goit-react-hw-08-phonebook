@@ -5,11 +5,14 @@ import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
 // import { Spinner } from 'components/Spinner/Spinner';
-import { Button } from 'components/Button/Button';
+// import { Button } from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
 import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
 import { Message } from 'components/Message/Message';
+import { Title } from '../components/Title/Title';
+import { ButtonIcon } from 'components/ButtonIcon/ButtonIcon';
+import { MdOutlineAdd } from 'react-icons/md/index.esm';
 
 const ContactsPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -35,6 +38,7 @@ const ContactsPage = () => {
 
   const addContact = contact => {
     dispatch(operations.addNewContact(contact));
+    togleModal();
   };
 
   const removeContact = removeContactId => {
@@ -47,17 +51,13 @@ const ContactsPage = () => {
 
   return (
     <>
-      <Section title="Phonebook">
-        <PhonebookForm
-          onAddContact={addContact}
-          onReviewName={reviewNameInContacts}
-        />
-        {/* <Spinner loading={loading} size={'56'} /> */}
-      </Section>
       <Section title="Contacts">
-        <Button type="button" onClick={togleModal}>
+        <ButtonIcon size="50px" position={[80, 60]} onClick={togleModal}>
+          <MdOutlineAdd />
+        </ButtonIcon>
+        {/* <Button type="button" onClick={togleModal}>
           Add contact
-        </Button>
+        </Button> */}
         <Filter
           filterHeader="Find contacts by name"
           value={name}
@@ -67,7 +67,17 @@ const ContactsPage = () => {
         {visibleContacts.length > 0 && (
           <Contacts onRemoveContact={removeContact} />
         )}
-        {showModal && <Modal onClose={togleModal} />}
+        {showModal && (
+          <Modal onClose={togleModal}>
+            <div>
+              <Title>Add Contact</Title>
+              <PhonebookForm
+                onAddContact={addContact}
+                onReviewName={reviewNameInContacts}
+              />
+            </div>
+          </Modal>
+        )}
       </Section>
     </>
   );

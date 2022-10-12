@@ -5,6 +5,7 @@ import {
   Input,
   ErrorText,
   Label,
+  ErrorWrap,
 } from 'components/PhonebookForm/Phonebook.styled';
 // import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
@@ -43,12 +44,16 @@ export const LoginForm = () => {
         <Label htmlFor="email">
           <LabelName>Email</LabelName>
           <Input type="email" name="email" />
-          <ErrorText component="p" name="email" />
+          <ErrorWrap>
+            <ErrorText component="p" name="email" />
+          </ErrorWrap>
         </Label>
         <Label htmlFor="password">
           <LabelName>Password</LabelName>
           <Input type="password" name="password" />
-          <ErrorText component="p" name="password" />
+          <ErrorWrap>
+            <ErrorText component="p" name="password" />
+          </ErrorWrap>
         </Label>
         <Button margin="32px 0 0">Log In</Button>
         {/* <AddButton

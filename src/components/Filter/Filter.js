@@ -5,8 +5,14 @@ export const Filter = ({ filterHeader, value, onChange }) => {
   return (
     <>
       <label htmlFor="filter">
-        <SC.FilterHeader>{filterHeader}</SC.FilterHeader>
-        <SC.Input type="text" name="filter" value={value} onChange={onChange} />
+        {/* <SC.FilterHeader>{filterHeader}</SC.FilterHeader> */}
+        <SC.Input
+          type="text"
+          name="filter"
+          value={value}
+          onChange={onChange}
+          placeholder="Find contacts by name"
+        />
       </label>
     </>
   );

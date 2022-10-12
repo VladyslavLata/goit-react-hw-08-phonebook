@@ -10,13 +10,23 @@ export const Button = styled.button`
   /* padding: ${p => p.theme.space[2]}px; */
   border-radius: ${p => p.theme.radii.round};
   border: ${p => p.theme.borders.none};
-  background-color: ${p => p.theme.colors.bgSecondary};
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.46);
+  background-color: ${p => {
+    if (!p.index) {
+      return p.theme.colors.bgSecondary;
+    }
+    return p.index % 2 === 0
+      ? p.theme.colors.bgSecondary
+      : p.theme.colors.bgPrimary;
+  }};
   cursor: pointer;
 
   &:active {
-    background-color: ${p => p.theme.colors.accent};
     box-shadow: none;
+  }
+
+  &:hover,
+  :focus {
+    background-color: ${p => p.theme.colors.accent};
   }
 
   & svg {

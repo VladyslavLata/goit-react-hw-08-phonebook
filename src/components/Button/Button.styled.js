@@ -13,8 +13,12 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:active {
-    background-color: ${p => p.theme.colors.accent};
     /* color: ${p => p.theme.colors.white}; */
     box-shadow: none;
+  }
+
+  &:hover,
+  :focus {
+    background-color: ${p => p.theme.colors.accent};
   }
 `;

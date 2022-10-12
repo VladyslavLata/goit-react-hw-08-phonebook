@@ -2,7 +2,7 @@ import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import {
   LabelName,
-  // AddButton,
+  ErrorWrap,
   Input,
   ErrorText,
   Label,
@@ -46,17 +46,23 @@ export const RegisterForm = () => {
         <Label htmlFor="name">
           <LabelName>Name</LabelName>
           <Input autoComplete="off" type="text" name="name" />
-          <ErrorText component="p" name="name" />
+          <ErrorWrap>
+            <ErrorText component="p" name="name" />
+          </ErrorWrap>
         </Label>
         <Label htmlFor="email">
           <LabelName>Email</LabelName>
           <Input type="email" name="email" />
-          <ErrorText component="p" name="email" />
+          <ErrorWrap>
+            <ErrorText component="p" name="email" />
+          </ErrorWrap>
         </Label>
         <Label htmlFor="password">
           <LabelName>Password</LabelName>
           <Input type="password" name="password" />
-          <ErrorText component="p" name="password" />
+          <ErrorWrap>
+            <ErrorText component="p" name="password" />
+          </ErrorWrap>
         </Label>
         <Button margin="32px 0 0 ">Register</Button>
         {/* <AddButton

@@ -1,5 +1,7 @@
+import { Section } from 'components/Section/Section';
+
 export const Home = () => {
-  return <h2>Welcome to Phonebook</h2>;
+  return <Section title="Welcome to Phonebook"></Section>;
 };
 
 // export default Home;

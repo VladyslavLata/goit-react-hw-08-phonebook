@@ -42,9 +42,15 @@ export const LabelName = styled.p`
 //   }
 // `;
 
+export const ErrorWrap = styled.div`
+  position: relative;
+  width: 100%;
+  height: 10px;
+`;
+
 export const ErrorText = styled(ErrorMessage)`
   position: absolute;
-  bottom: -${p => p.theme.space[4]}px;
+  top: 0;
   left: 0;
   color: ${p => p.theme.colors.red};
   font-size: ${p => p.theme.fontSizes.xs};

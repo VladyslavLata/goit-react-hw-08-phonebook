@@ -25,6 +25,10 @@ export const Link = styled(NavLink)`
     transform: scaleX(1);
   }
 
+  &:hover:not(:active)::after {
+    transform: scaleX(1);
+  }
+
   /* &.active {
     border-bottom: ${p => p.theme.borders.l};
     border-color: ${p => p.theme.colors.accent};

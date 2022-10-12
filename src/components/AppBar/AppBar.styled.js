@@ -14,6 +14,7 @@ export const Header = styled.header`
   padding-bottom: ${p => p.theme.space[4]}px;
   border-bottom: ${p => p.theme.borders.m};
   border-color: ${p => p.theme.colors.bgSecondary};
+  background-color: ${p => p.theme.borders.bgPrimary};
   /* py={4}
       display="flex"
       position="fixed"

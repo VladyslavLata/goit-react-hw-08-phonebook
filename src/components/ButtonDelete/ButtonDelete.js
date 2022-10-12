@@ -4,7 +4,7 @@ import { Button } from './ButtonDelete.styled';
 import { Spinner } from 'components/Spinner/Spinner';
 import { selectErrorMessage } from 'redux/contacts/selectors';
 
-export const ButtonDelete = ({ onRemoveContact, id, children }) => {
+export const ButtonDelete = ({ onRemoveContact, id, index, children }) => {
   const [loading, setLoading] = useState(false);
   const error = useSelector(selectErrorMessage);
   if (error) {
@@ -12,6 +12,7 @@ export const ButtonDelete = ({ onRemoveContact, id, children }) => {
   }
   return (
     <Button
+      index={index}
       type="button"
       disabled={loading}
       onClick={() => {

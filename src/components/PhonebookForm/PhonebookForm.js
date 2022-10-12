@@ -1,7 +1,13 @@
 import { Formik, Form } from 'formik';
 import PropTypes from 'prop-types';
 import * as yup from 'yup';
-import { LabelName, Input, ErrorText, Label } from './Phonebook.styled';
+import {
+  LabelName,
+  Input,
+  ErrorText,
+  Label,
+  ErrorWrap,
+} from './Phonebook.styled';
 import { useSelector } from 'react-redux';
 import { selectLoading } from 'redux/contacts/selectors';
 import { Button } from 'components/Button/Button';
@@ -56,14 +62,18 @@ export const PhonebookForm = ({ onAddContact, onReviewName }) => {
         <Label htmlFor="name">
           <LabelName>Name</LabelName>
           <Input autoComplete="off" type="text" name="name" />
-          <ErrorText component="p" name="name" />
+          <ErrorWrap>
+            <ErrorText component="p" name="name" />
+          </ErrorWrap>
         </Label>
         <Label htmlFor="number">
           <LabelName>Phone</LabelName>
           <Input type="tel" name="number" />
-          <ErrorText component="p" name="number" />
+          <ErrorWrap>
+            <ErrorText component="p" name="number" />
+          </ErrorWrap>
         </Label>
-        <Button disabled={loading} margin="32px 0 0">
+        <Button disabled={loading} margin="45px 0 0">
           Add contact
           <Spinner loading={loading} size="24" />
         </Button>
