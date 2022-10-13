@@ -7,15 +7,9 @@ import {
   Label,
   ErrorWrap,
 } from 'components/PhonebookForm/Phonebook.styled';
-// import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operations';
 import { Button } from 'components/Button/Button';
-// import { useAuth } from 'hooks/useAuth';
-
-// const ErrorText = styled(ErrorMessage)`
-//   color: red;
-// `;
 
 const schema = yup.object().shape({
   email: yup.string().strict().trim().email().required(),
@@ -29,7 +23,6 @@ const initialValues = {
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  // const loading = useSelector(selectLoading);
   const handleSubmit = (values, actions) => {
     dispatch(login({ ...values }));
     actions.resetForm();
@@ -56,12 +49,6 @@ export const LoginForm = () => {
           </ErrorWrap>
         </Label>
         <Button margin="32px 0 0">Log In</Button>
-        {/* <AddButton
-          type="submit"
-          // disabled={loading}
-        >
-          Log In
-        </AddButton> */}
       </Form>
     </Formik>
   );

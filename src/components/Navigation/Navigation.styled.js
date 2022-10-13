@@ -26,35 +26,6 @@ export const Link = styled(NavLink)`
   &:active {
     transform: scaleX(1);
   }
-
-  /* &:active {
-    color: red;
-  } */
-
-  /* {
-    transform: scaleX(1);
-  } */
-
-  /* &.active {
-    border-bottom: ${p => p.theme.borders.l};
-    border-color: ${p => p.theme.colors.accent};
-  } */
 `;
 
-export const Item = styled.li`
-  /* &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    width: 50px;
-    height: 50px;
-    color: red;
-  } */
-  /* & > .active { */
-  /* border-bottom: ${p => p.theme.borders.fat};
-  border-color: ${p => p.theme.colors.accent}; */
-  /* } */
-  /* border-bottom: 1px solid red; */
-`;
+export const Item = styled.li``;

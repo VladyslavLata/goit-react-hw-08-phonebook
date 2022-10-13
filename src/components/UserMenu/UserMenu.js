@@ -13,16 +13,12 @@ export const UserMenu = () => {
   return (
     <Box display="flex">
       <p>
-        {/* as="p" display="flex" justifyContent="baseline"> */}
         Welcom,
         <SC.UserIcon /> {user?.name}
       </p>
       <Button margin="0 0 0 16px" type="button" onClick={userLogout}>
         Logout
       </Button>
-      {/* <button type="button" onClick={() => dispatch(logout())}>
-        Logout
-      </button> */}
     </Box>
   );
 };

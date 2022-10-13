@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { useAuth } from 'hooks/useAuth';
 import { Box } from 'components/Box/Box';
 import * as SC from './Navigation.styled';

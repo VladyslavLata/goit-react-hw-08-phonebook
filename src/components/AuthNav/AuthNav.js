@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { Box } from 'components/Box/Box';
 import * as SC from '../Navigation/Navigation.styled';
 

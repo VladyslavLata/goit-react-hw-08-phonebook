@@ -4,7 +4,7 @@ export const Backdrop = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99999;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
@@ -26,6 +26,7 @@ export const ModalWrap = styled.div`
   padding: ${p => p.theme.space[5]}px;
   width: 500px;
   height: 400px;
+  border-radius: ${p => p.theme.radii.md};
   background-color: ${p => p.theme.colors.bgPrimary};
 `;
 

@@ -13,7 +13,6 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:active {
-    /* color: ${p => p.theme.colors.white}; */
     box-shadow: none;
   }
 

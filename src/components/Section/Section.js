@@ -3,16 +3,7 @@ import PropTypes from 'prop-types';
 import { SectionTitle } from './Sectio.styled';
 
 export const Section = ({ title, children }) => (
-  <Box
-    as="section"
-    px={4}
-    pb={4}
-    pt="80px"
-    mx="auto"
-    // width="400px"
-    position="relative"
-    // zIndex="-8"
-  >
+  <Box as="section" px={4} pb={4} pt="80px" mx="auto" position="relative">
     {title && <SectionTitle>{title}</SectionTitle>}
     {children}
   </Box>

@@ -7,7 +7,6 @@ import { PrivateRoute, RestrictedRoute } from 'utils';
 import { useAuth } from 'hooks/useAuth';
 import { Home } from 'pages/Home.js';
 
-// const Home = lazy(() => import('../pages/Home.js'));
 const ContactsPage = lazy(() => import('pages/Contacts'));
 const LoginPage = lazy(() => import('pages/Login'));
 const RegisterPage = lazy(() => import('pages/Register'));

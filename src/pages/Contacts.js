@@ -4,8 +4,6 @@ import { Section } from 'components/Section/Section';
 import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
-// import { Spinner } from 'components/Spinner/Spinner';
-// import { Button } from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
 import { filter } from 'redux/contacts/contactsSlice';
 import { operations, selectors } from 'redux/contacts';
@@ -20,7 +18,6 @@ const ContactsPage = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectors.selectContacts);
   const name = useSelector(selectors.selectFilterName);
-  // const loading = useSelector(selectors.selectLoading);
   const messageError = useSelector(selectors.selectErrorMessage);
   const visibleContacts = useSelector(selectors.selectVisibleContacts);
 
@@ -55,14 +52,7 @@ const ContactsPage = () => {
         <MdOutlineAdd />
       </ButtonIcon>
       <Section title="Contacts">
-        {/* <Button type="button" onClick={togleModal}>
-          Add contact
-        </Button> */}
-        <Filter
-          filterHeader="Find contacts by name"
-          value={name}
-          onChange={changeFilter}
-        />
+        <Filter value={name} onChange={changeFilter} />
         {messageError && <Message message={messageError} />}
         {visibleContacts.length > 0 && (
           <Contacts onRemoveContact={removeContact} />
