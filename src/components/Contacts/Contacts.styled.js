@@ -10,7 +10,7 @@ export const ContactsList = styled.ul`
   margin-top: ${p => p.theme.space[4]}px;
   margin: 30px auto 0;
   max-width: 500px;
-  max-height: 490px;
+  max-height: 70vh;
   overflow: auto;
   border: ${p => p.theme.borders.m};
   border-color: ${p => p.theme.colors.bgSecondary};
