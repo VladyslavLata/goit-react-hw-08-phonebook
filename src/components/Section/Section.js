@@ -9,7 +9,7 @@ export const Section = ({ title, children }) => (
     pb={4}
     pt="80px"
     mx="auto"
-    width="400px"
+    // width="400px"
     position="relative"
     // zIndex="-8"
   >

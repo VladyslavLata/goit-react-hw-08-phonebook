@@ -8,6 +8,8 @@ export const Number = styled.p`
 export const ContactsList = styled.ul`
   padding: ${p => p.theme.space[4]}px ${p => p.theme.space[3]}px;
   margin-top: ${p => p.theme.space[4]}px;
+  margin: 30px auto 0;
+  max-width: 500px;
   max-height: 490px;
   overflow: auto;
   border: ${p => p.theme.borders.m};

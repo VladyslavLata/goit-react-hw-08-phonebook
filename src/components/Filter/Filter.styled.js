@@ -18,3 +18,8 @@ export const Input = styled.input`
     border-color: ${p => p.theme.colors.accent};
   }
 `;
+
+export const InputWrap = styled.div`
+  margin: 0 auto;
+  max-width: 400px;
+`;

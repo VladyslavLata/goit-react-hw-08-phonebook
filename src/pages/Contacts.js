@@ -51,10 +51,10 @@ const ContactsPage = () => {
 
   return (
     <>
+      <ButtonIcon size="50px" position={['5px', '49%']} onClick={togleModal}>
+        <MdOutlineAdd />
+      </ButtonIcon>
       <Section title="Contacts">
-        <ButtonIcon size="50px" position={[80, 60]} onClick={togleModal}>
-          <MdOutlineAdd />
-        </ButtonIcon>
         {/* <Button type="button" onClick={togleModal}>
           Add contact
         </Button> */}

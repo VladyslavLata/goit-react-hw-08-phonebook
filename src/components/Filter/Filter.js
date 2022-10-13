@@ -3,7 +3,7 @@ import * as SC from './Filter.styled';
 
 export const Filter = ({ filterHeader, value, onChange }) => {
   return (
-    <>
+    <SC.InputWrap>
       <label htmlFor="filter">
         {/* <SC.FilterHeader>{filterHeader}</SC.FilterHeader> */}
         <SC.Input
@@ -14,7 +14,7 @@ export const Filter = ({ filterHeader, value, onChange }) => {
           placeholder="Find contacts by name"
         />
       </label>
-    </>
+    </SC.InputWrap>
   );
 };
 

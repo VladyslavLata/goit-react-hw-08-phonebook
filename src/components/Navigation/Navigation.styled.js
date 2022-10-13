@@ -21,13 +21,19 @@ export const Link = styled(NavLink)`
     transition: transform 200ms ease-out;
   }
 
-  &.active::after {
+  &.active::after,
+  &:hover:not(.active)::after,
+  &:active {
     transform: scaleX(1);
   }
 
-  &:hover:not(:active)::after {
+  /* &:active {
+    color: red;
+  } */
+
+  /* {
     transform: scaleX(1);
-  }
+  } */
 
   /* &.active {
     border-bottom: ${p => p.theme.borders.l};
